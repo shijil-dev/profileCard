@@ -2,34 +2,46 @@ import bat from "../public/lme.jpg";
 import "./styles.css";
 
 export function App() {
-  const skills = ["react", "git/github", "linux"];
   return (
     <div className="card">
       <Avatar />
       <Intro />
-      {skills.map((skill) => (
-        <Skills skill={skill} />
-      ))}
+      <SkillList />
     </div>
   );
 }
 
 function Avatar() {
-  return (
-    <div>
-      <img src={bat} className="avatar" />
-    </div>
-  );
+  return <img src={bat} className="avatar" alt="literally me" />;
 }
 function Intro() {
   return (
-    <p>
-      I am a nobody who is lurking here and there. I am learning things that I
-      like currently Its React and I love it.
-    </p>
+    <div>
+      <h1 className="h1">Dev Nobody</h1>
+      <p>
+        I am so happy to do this projects by udemy course of react. It's really
+        fun and informative.
+      </p>
+    </div>
+  );
+}
+
+function SkillList() {
+  return (
+    <div className="skill-list">
+      <Skills skill="react" level="****" color="red" />
+      <Skills skill="git/github" level="***" color="blue" />
+      <Skills skill="linux" level="***" color="yellow" />
+      <Skills skill="javaScript" level="*****" color="green" />
+    </div>
   );
 }
 
 function Skills(props) {
-  return <h3>{props.skill}</h3>;
+  return (
+    <div className="skill" style={{ backgroundColor: props.color }}>
+      <span>{props.skill}</span>
+      <span>{props.level}</span>
+    </div>
+  );
 }
