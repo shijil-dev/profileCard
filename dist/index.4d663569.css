@@ -1,0 +1,54 @@
+@import "https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&display=swap";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f7f7f7;
+  font-family: IBM Plex Mono, sans-serif;
+}
+
+h1 {
+  margin-bottom: 12px;
+}
+
+.card {
+  border: 4px solid #222;
+  width: 450px;
+  margin: 40px;
+}
+
+.card:after {
+  content: "";
+  display: block;
+}
+
+.avatar {
+  width: 100%;
+  display: block;
+}
+
+.data {
+  padding: 24px 32px 32px;
+}
+
+.skill-list {
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+  list-style: none;
+  display: flex;
+}
+
+.skill {
+  border-radius: 5px;
+  align-items: center;
+  gap: 8px;
+  padding: 2px 12px;
+  font-weight: 500;
+  display: flex;
+}
+
+/*# sourceMappingURL=index.4d663569.css.map */
