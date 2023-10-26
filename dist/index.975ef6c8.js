@@ -27156,29 +27156,51 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _lmeJpg = require("../public/lme.jpg");
 var _lmeJpgDefault = parcelHelpers.interopDefault(_lmeJpg);
 var _stylesCss = require("./styles.css");
+const skills = [
+    {
+        name: "react",
+        level: "****",
+        color: "red"
+    },
+    {
+        name: "git github",
+        level: "***",
+        color: "blue"
+    },
+    {
+        name: "linux",
+        level: "***",
+        color: "yellow"
+    },
+    {
+        name: "javscript",
+        level: "*****",
+        color: "green"
+    }
+];
 function App() {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "card",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Avatar, {}, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 7,
+                lineNumber: 28,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Intro, {}, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 8,
+                lineNumber: 29,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(SkillList, {}, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 9,
+                lineNumber: 30,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/App.js",
-        lineNumber: 6,
+        lineNumber: 27,
         columnNumber: 5
     }, this);
 }
@@ -27190,7 +27212,7 @@ function Avatar() {
         alt: "literally me"
     }, void 0, false, {
         fileName: "src/App.js",
-        lineNumber: 15,
+        lineNumber: 36,
         columnNumber: 10
     }, this);
 }
@@ -27203,20 +27225,20 @@ function Intro() {
                 children: "Dev Nobody"
             }, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 20,
+                lineNumber: 41,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 children: "I am so happy to do this projects by udemy course of react. It's really fun and informative."
             }, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 21,
+                lineNumber: 42,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/App.js",
-        lineNumber: 19,
+        lineNumber: 40,
         columnNumber: 5
     }, this);
 }
@@ -27224,76 +27246,56 @@ _c2 = Intro;
 function SkillList() {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "skill-list",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Skills, {
-                skill: "react",
-                level: "****",
-                color: "red"
+        children: skills.map((skill)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Skills, {
+                skill: skill
             }, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 32,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Skills, {
-                skill: "git/github",
-                level: "***",
-                color: "blue"
-            }, void 0, false, {
-                fileName: "src/App.js",
-                lineNumber: 33,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Skills, {
-                skill: "linux",
-                level: "***",
-                color: "yellow"
-            }, void 0, false, {
-                fileName: "src/App.js",
-                lineNumber: 34,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Skills, {
-                skill: "javaScript",
-                level: "*****",
-                color: "green"
-            }, void 0, false, {
-                fileName: "src/App.js",
-                lineNumber: 35,
-                columnNumber: 7
-            }, this)
-        ]
-    }, void 0, true, {
+                lineNumber: 54,
+                columnNumber: 9
+            }, this))
+    }, void 0, false, {
         fileName: "src/App.js",
-        lineNumber: 31,
+        lineNumber: 52,
         columnNumber: 5
     }, this);
 }
 _c3 = SkillList;
-function Skills(props) {
+function Skills({ skill }) {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "skill",
         style: {
-            backgroundColor: props.color
+            backgroundColor: skill.color
         },
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                children: props.skill
+                children: skill.name
             }, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 43,
+                lineNumber: 63,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                children: props.level
+                children: [
+                    skill.level === "***" && "\uD83D\uDC76",
+                    skill.level === "****" && "\uD83D\uDC4D",
+                    skill.level === "*****" && "\uD83D\uDCAA"
+                ]
+            }, void 0, true, {
+                fileName: "src/App.js",
+                lineNumber: 64,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                children: skill.level
             }, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 44,
+                lineNumber: 70,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/App.js",
-        lineNumber: 42,
+        lineNumber: 62,
         columnNumber: 5
     }, this);
 }

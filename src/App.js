@@ -1,6 +1,27 @@
 import bat from "../public/lme.jpg";
 import "./styles.css";
-
+const skills = [
+  {
+    name: "react",
+    level: "****",
+    color: "red",
+  },
+  {
+    name: "git github",
+    level: "***",
+    color: "blue",
+  },
+  {
+    name: "linux",
+    level: "***",
+    color: "yellow",
+  },
+  {
+    name: "javscript",
+    level: "*****",
+    color: "green",
+  },
+];
 export function App() {
   return (
     <div className="card">
@@ -29,19 +50,24 @@ function Intro() {
 function SkillList() {
   return (
     <div className="skill-list">
-      <Skills skill="react" level="****" color="red" />
-      <Skills skill="git/github" level="***" color="blue" />
-      <Skills skill="linux" level="***" color="yellow" />
-      <Skills skill="javaScript" level="*****" color="green" />
+      {skills.map((skill) => (
+        <Skills skill={skill} />
+      ))}
     </div>
   );
 }
 
-function Skills(props) {
+function Skills({ skill }) {
   return (
-    <div className="skill" style={{ backgroundColor: props.color }}>
-      <span>{props.skill}</span>
-      <span>{props.level}</span>
+    <div className="skill" style={{ backgroundColor: skill.color }}>
+      <span>{skill.name}</span>
+      <span>
+        {skill.level === "***" && "👶"}
+        {skill.level === "****" && "👍"}
+        {skill.level === "*****" && "💪"}
+      </span>
+
+      <span>{skill.level}</span>
     </div>
   );
 }
