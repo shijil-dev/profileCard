@@ -27159,17 +27159,17 @@ var _stylesCss = require("./styles.css");
 const skills = [
     {
         name: "react",
-        level: "****",
+        level: "***",
         color: "red"
     },
     {
         name: "git github",
-        level: "***",
+        level: "****",
         color: "blue"
     },
     {
         name: "linux",
-        level: "***",
+        level: "****",
         color: "yellow"
     },
     {
